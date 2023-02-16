@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Merriweather', serif;
+}
+i{
+    font-size: 2rem;
+}
+.hero{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+}
+.hero__top{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,0,180, 0.5);
+    padding: 3rem 3rem;
+}
+.hero__kort{
+    background-color: rgba(0,0,0,0.5);
+    grid-column: 2 / -1;
+}
+.hero__img{
+    grid-column: 1 / 5;
+}
+a,.x{
+    color: darkorange;
+}
+img{
+    width: 100%;
+}
+
+.knap {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  } 
+  .knap img{
+    max-width: fit-content;
+  }
+.services{
+    display: flex;
+    gap: 2rem;
+}
+.services__card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.services__card h2{
+    font-size: 2rem;
+}
