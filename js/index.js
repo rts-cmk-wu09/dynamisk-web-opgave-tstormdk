@@ -24,17 +24,17 @@ hero__section.innerHTML = `
 
     let services_section = document.querySelector(".services");
     services.forEach((service) => {
-  let card = document.createElement("section");
-  card.setAttribute("class", "services__card");
-  let billede = document.createElement("img");
-  let title = document.createElement("h2");
-  let kort_tekst = document.createElement("p");
-  let kort_link = document.createElement("a");
+    let card = document.createElement("section");
+    card.setAttribute("class", "services__card");
+    let billede = document.createElement("img");
+    let title = document.createElement("h2");
+    let kort_tekst = document.createElement("p");
+    let kort_link = document.createElement("a");
   
-  billede.src = service.illustration;
-  title.textContent = service.headline;
-  kort_tekst.textContent = service.text;
-  kort_link.textContent = service.linktext;
+    billede.src = service.illustration;
+    title.textContent = service.headline;
+    kort_tekst.textContent = service.text;
+    kort_link.textContent = service.linktext;
 //   let list = document.createElement("ul");
 //   service.headline.forEach((nyTekst) => {
 //     let listItem = document.createElement("li");
@@ -49,10 +49,50 @@ hero__section.innerHTML = `
     services_section.append(card);
 });
 
+advantages.forEach((adv) => {
+    let card = document.createElement("section");
+    card.setAttribute("class", "services__card");
+    let billede = document.createElement("img");
+    let title = document.createElement("h2");
+    let kort_tekst = document.createElement("p");
+    let kort_link = document.createElement("a");
+  
+    billede.src = service.illustration;
+    title.textContent = service.headline;
+    kort_tekst.textContent = service.text;
+    kort_link.textContent = service.linktext;
+//   let list = document.createElement("ul");
+//   service.headline.forEach((nyTekst) => {
+//     let listItem = document.createElement("li");
+//     listItem.textContent = nyTekst;
+//     list.append(listItem);
+//   });
+    card.append(billede);
+    card.append(title);
+    card.append(kort_tekst);
+    card.append(kort_link);
+//   card.append(list);
+    services_section.append(card);
+});
+
+
 // let hero_background = `
 // background: url(${hero.image});
 // background-size: cover;
 // `;
 // hero__section.style = hero_background;
+let footer_section = document.createElement("footer");
+document.body.append(footer_section);
+footer_section.setAttribute("class","footer");
+
+footer_section.innerHTML = `
+// <section class=""></section>
+// <div class="hero__kort">
+<h1>${hero.headline}</h1>
+ <p>${hero.copy}</p>
+// </div>
+`;
+
+
 
 }) // DOMContentLoaded slut
